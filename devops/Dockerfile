@@ -27,3 +27,5 @@ CMD $TARGET_PATH/runjava.sh javaclass.MyServer
 # Stop the container
 #    docker stop projContainer
 
+
+
