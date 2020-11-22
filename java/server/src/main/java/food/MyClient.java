@@ -19,15 +19,16 @@ public class MyClient {
 
 
         WebTarget resouce =
-                client.target("https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/mrswagbagtag");
+                client.target("https://api.yelp.com/v3/businesses/search?latitude=39.0839973&longitude=-77.1527578");
         Response response = resouce.request(MediaType.APPLICATION_JSON)
-                .header("X-Riot-Token", "RGAPI-d152e4c2-ec12-45ed-9070-cfc06c25cb71")
+                .header("Authorization", "Bearer oEjwi6RPIDsjF-OxQa_6-dfl9jtXgIcvm0BjweF5x02kFb_sVzq9ilqwx64gBcIoBAnb-KxKjEpH0aevJqiNKrB703Z-MsyIWaKuxZ-ML-xGmBPo-sIZ-bzRSNK6X3Yx")
                 .get();
 
         String ret = response.readEntity(String.class);
         if (response.getStatus() != 200) {
             throw new RuntimeException("Failed HTTP error code: " + response.getStatus() + ", " + ret);
         }
+        System.out.println(ret);
 
 
 
