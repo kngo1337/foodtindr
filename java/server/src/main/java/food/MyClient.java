@@ -1,6 +1,6 @@
 package food;
 
-import com.google.gson.Gson;
+import com.google.gson.*;
 import org.glassfish.jersey.client.ClientConfig;
 
 import javax.ws.rs.client.Client;
@@ -28,12 +28,14 @@ public class MyClient {
         if (response.getStatus() != 200) {
             throw new RuntimeException("Failed HTTP error code: " + response.getStatus() + ", " + ret);
         }
-        System.out.println(ret);
 
-
-
-
-
+        JsonObject obj = new Gson().fromJson(ret, JsonObject.class);
+        JsonArray jsonArray = obj.getAsJsonArray("businesses");
+        for (JsonElement jsonElement : jsonArray) {
+            String restaurantName = jsonElement.getAsJsonObject().get("name").getAsString();
+            String imageUrl = jsonElement.getAsJsonObject().get("image_url").getAsString();
+            System.out.println(restaurantName + ", " + imageUrl);
+        }
 
 //        Gson gson = new Gson();
 //        Player p = gson.fromJson(ret, Player.class);
