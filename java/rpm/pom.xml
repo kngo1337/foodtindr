@@ -9,7 +9,74 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <name>rpm</name>
+    <packaging>rpm</packaging>
     <artifactId>rpm</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>server</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>generate-rpm</id>
+                        <goals>
+                            <goal>rpm</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <summary>Test Project</summary>
+                    <name>foodtindr</name>
+                    <projversion>1.0.0</projversion>
+                    <!--                    <release>0.%(perl -e 'print time()'</release>-->
+                    <group>Applications</group>
+                    <prefix>/apps/foodtindr</prefix>
+                    <defineStatements>
+                        <defineStatement>ls_base /apps/foodtindr</defineStatement>
+                    </defineStatements>
+
+                    <mappings>
+                        <mapping>
+                            <directory>%{ls_base}/bin</directory>
+                            <sources>
+                                <source>
+                                    <location>files-for-rpm</location>
+                                </source>
+                            </sources>
+                            <dirmode>755</dirmode>
+                            <filemode>700</filemode>
+                            <username>root</username>
+                            <groupname>root</groupname>
+                        </mapping>
+
+                        <mapping>
+                            <directory>%{ls_base}/lib</directory>
+                            <dirmode>755</dirmode>
+                            <recurseDirectories>true</recurseDirectories>
+
+                            <!-- This causes dependencies to be pulled here -->
+                            <dependency/>
+                        </mapping>
+                    </mappings>
+
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
