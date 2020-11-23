@@ -2,7 +2,7 @@ package food.gamestate;
 
 public class Driver {
     public static void main(String[] args){
-        GameStateManager game = new GameStateManager();
+        GameStateManager game = GameStateManager.gameStateManager;
         String code = game.createNewGame("Tina");
         System.out.println(code);
         game.addPlayers(code, "Colin");

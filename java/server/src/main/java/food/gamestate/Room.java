@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Room{
 
-    ArrayList<Player> players = new ArrayList<>();
+    public ArrayList<Player> players = new ArrayList<>();
     String roomCode = "";
     public boolean gameStarted = false;
     HashMap<String, Integer> restaurantMap = new HashMap<>();;

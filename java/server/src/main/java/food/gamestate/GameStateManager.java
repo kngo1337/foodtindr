@@ -6,10 +6,18 @@ import java.util.ArrayList;
 
 public class GameStateManager {
 
+    public static GameStateManager gameStateManager = new GameStateManager();
+
     ArrayList<Room> gameRoom = new ArrayList<Room>();
 
-    public GameStateManager(){
+    private GameStateManager(){
 
+        // TODO: 11/22/2020 REMOVE LATER
+        Room newGame = new Room();
+        newGame.roomCode = "ABCD";
+        newGame.addPlayer("TINA");
+        newGame.addPlayer("colin");
+        gameRoom.add(newGame);
     }
 
     public String createNewGame(String playerName){
