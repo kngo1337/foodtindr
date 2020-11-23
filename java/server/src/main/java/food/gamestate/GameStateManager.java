@@ -12,8 +12,10 @@ public class GameStateManager {
     ArrayList<Room> gameRoom = new ArrayList<Room>();
 
     private GameStateManager(){
+//        loadExampleData();
+    }
 
-        // TODO: 11/22/2020 REMOVE LATER
+    private void loadExampleData() {
         Room newGame = new Room();
         newGame.roomCode = "ABCD";
         newGame.addPlayer("Tina");
