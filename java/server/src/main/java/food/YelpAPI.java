@@ -46,11 +46,15 @@ public class YelpAPI {
         for (JsonElement jsonElement : jsonArray) {
             String restaurantName = jsonElement.getAsJsonObject().get("name").getAsString();
             String imageUrl = jsonElement.getAsJsonObject().get("image_url").getAsString();
-            //System.out.println(restaurantName + ", " + imageUrl);
+//            System.out.println(restaurantName + ", " + imageUrl);
             Restaurant restaurant = new Restaurant(restaurantName, imageUrl);
             restaurantList.add(restaurant);
         }
         return restaurantList;
+    }
+
+    public static void main(String[] args) {
+        getMeRestaurant();
     }
 
 }

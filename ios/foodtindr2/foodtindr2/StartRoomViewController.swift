@@ -17,8 +17,6 @@ class StartRoomViewController: UIViewController, UITextFieldDelegate  {
         super.viewDidLoad()
         enterNameTextField.delegate = self
         enterRoomCode.delegate = self
-        enterNameTextField.text = "HAO"
-        enterRoomCode.text = "ABCD"
     }
     
     @IBAction func createRoomPressed(_ sender: Any) {

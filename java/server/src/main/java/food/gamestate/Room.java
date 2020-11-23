@@ -12,7 +12,7 @@ public class Room{
     public boolean gameStarted = false;
     HashMap<String, Integer> restaurantMap = new HashMap<>();;
     ArrayList<YelpAPI.Restaurant> restaurantToImage = new ArrayList<>();
-    boolean winner = false;
+    String winningRestaurant = null;
 
     public Room(){ }
 
@@ -21,13 +21,4 @@ public class Room{
         players.add(person);
     }
 
-
-
-
-
-//    public static ArrayList<Player> getPlayers(){
-//        ArrayList<Player> temp = new ArrayList<Player>();
-//        temp = players;
-//        return temp;
-//    }
 }

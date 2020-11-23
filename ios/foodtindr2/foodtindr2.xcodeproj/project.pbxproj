@@ -15,6 +15,9 @@
 		3F4C9B9E256AD53E004748F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C9B9C256AD53E004748F9 /* LaunchScreen.storyboard */; };
 		3F4C9BA9256B3B2C004748F9 /* StartRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C9BA8256B3B2C004748F9 /* StartRoomViewController.swift */; };
 		3F4C9BB2256B4A22004748F9 /* ConfigVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C9BB1256B4A22004748F9 /* ConfigVariables.swift */; };
+		3FEBFC4A256C0F5C003BE7A7 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEBFC49256C0F5C003BE7A7 /* SwipeViewController.swift */; };
+		3FEBFC5A256C1167003BE7A7 /* StackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEBFC59256C1167003BE7A7 /* StackContainerView.swift */; };
+		3FEBFC5D256C1180003BE7A7 /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEBFC5C256C1180003BE7A7 /* SwipeCardView.swift */; };
 		6FE0288AEAE0FE657639BD9E /* Pods_foodtindr2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7591C7088B36819136E4E1 /* Pods_foodtindr2.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,9 @@
 		3F4C9B9F256AD53E004748F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4C9BA8256B3B2C004748F9 /* StartRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRoomViewController.swift; sourceTree = "<group>"; };
 		3F4C9BB1256B4A22004748F9 /* ConfigVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigVariables.swift; sourceTree = "<group>"; };
+		3FEBFC49256C0F5C003BE7A7 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		3FEBFC59256C1167003BE7A7 /* StackContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackContainerView.swift; path = ../../../../../TinderSwipeInterface/TinderStack/TinderStack/View/StackContainerView.swift; sourceTree = "<group>"; };
+		3FEBFC5C256C1180003BE7A7 /* SwipeCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeCardView.swift; path = ../../../../../TinderSwipeInterface/TinderStack/TinderStack/View/SwipeCardView.swift; sourceTree = "<group>"; };
 		B12C738AA66159D301C7B919 /* Pods-foodtindr2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodtindr2.debug.xcconfig"; path = "Target Support Files/Pods-foodtindr2/Pods-foodtindr2.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2EEBA892FF2A92CAFE7421 /* Pods-foodtindr2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodtindr2.release.xcconfig"; path = "Target Support Files/Pods-foodtindr2/Pods-foodtindr2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +82,7 @@
 		3F4C9B90256AD53C004748F9 /* foodtindr2 */ = {
 			isa = PBXGroup;
 			children = (
+				3FEBFC55256C10DF003BE7A7 /* Swipe */,
 				3F4C9B91256AD53C004748F9 /* AppDelegate.swift */,
 				3F4C9B93256AD53C004748F9 /* SceneDelegate.swift */,
 				3F4C9B97256AD53C004748F9 /* Main.storyboard */,
@@ -87,6 +94,16 @@
 				3F4C9BB1256B4A22004748F9 /* ConfigVariables.swift */,
 			);
 			path = foodtindr2;
+			sourceTree = "<group>";
+		};
+		3FEBFC55256C10DF003BE7A7 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				3FEBFC5C256C1180003BE7A7 /* SwipeCardView.swift */,
+				3FEBFC59256C1167003BE7A7 /* StackContainerView.swift */,
+				3FEBFC49256C0F5C003BE7A7 /* SwipeViewController.swift */,
+			);
+			path = Swipe;
 			sourceTree = "<group>";
 		};
 		64C2036E2C2E40BC49D83242 /* Frameworks */ = {
@@ -214,8 +231,11 @@
 				3F4C9BB2256B4A22004748F9 /* ConfigVariables.swift in Sources */,
 				3F4C9B92256AD53C004748F9 /* AppDelegate.swift in Sources */,
 				3F4C9B94256AD53C004748F9 /* SceneDelegate.swift in Sources */,
+				3FEBFC5D256C1180003BE7A7 /* SwipeCardView.swift in Sources */,
 				3F4C9BA9256B3B2C004748F9 /* StartRoomViewController.swift in Sources */,
 				35E736A0256B27E200E10364 /* JoinRoomTableViewController.swift in Sources */,
+				3FEBFC5A256C1167003BE7A7 /* StackContainerView.swift in Sources */,
+				3FEBFC4A256C0F5C003BE7A7 /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

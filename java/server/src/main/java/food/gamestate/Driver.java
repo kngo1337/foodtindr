@@ -9,7 +9,7 @@ public class Driver {
         game.startGame(code);
         game.confirmRestaurants(code, "Tina", "Il Pizzico");
         game.confirmRestaurants(code, "Colin", "Il Pizzico");
-        if(game.getRoom(code).winner){
+        if(game.getRoom(code).winningRestaurant != null){
             System.out.println("true");
         } else{ System.out.println("false"); }
     }

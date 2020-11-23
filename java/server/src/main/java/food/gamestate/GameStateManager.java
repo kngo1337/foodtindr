@@ -3,6 +3,7 @@ package food.gamestate;
 import food.YelpAPI;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GameStateManager {
 
@@ -15,9 +16,10 @@ public class GameStateManager {
         // TODO: 11/22/2020 REMOVE LATER
         Room newGame = new Room();
         newGame.roomCode = "ABCD";
-        newGame.addPlayer("TINA");
+        newGame.addPlayer("Tina");
         newGame.addPlayer("colin");
         gameRoom.add(newGame);
+//        startGame(newGame.roomCode);
     }
 
     public String createNewGame(String playerName){
@@ -73,18 +75,33 @@ public class GameStateManager {
                 Integer temp = game.restaurantMap.get(restaurant);
                 temp++;
                 game.restaurantMap.put(restaurant,temp);
+
+                System.out.println(temp + ", " + restaurant);
                 if(temp == game.players.size()){
-                    game.winner = true;
+                    game.winningRestaurant = restaurant;
                 }
             }
         }
     }
 
-//    Object getGameState(){
-//        Object hi = new Object();
-//
-//        return hi;
-//    }
+    public List<YelpAPI.Restaurant> getRestaurants(String roomCode){
+        for(Room game: gameRoom){
+            if(game.roomCode.equals(roomCode)){
+                return game.restaurantToImage;
+            }
+        }
+        throw new RuntimeException("Runtime Error");
+    }
+
+    public String getWinningRestaurant(String roomCode){
+        for(Room game: gameRoom){
+            if(game.roomCode.equals(roomCode)){
+                return game.winningRestaurant;
+            }
+        }
+        throw new RuntimeException("Runtime Error");
+    }
+
 
     public Room getRoom(String roomCode){
         for(Room game: gameRoom){
