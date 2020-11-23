@@ -1,4 +1,4 @@
-package food.ws.gamestate;
+package food.gamestate;
 
 public class Player {
     String name = "";

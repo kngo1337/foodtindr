@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  foodtindr2
-//
-//  Created by Hao on 11/22/20.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

@@ -1,13 +1,6 @@
-//
-//  AppDelegate.swift
-//  foodtindr2
-//
-//  Created by Hao on 11/22/20.
-//
-
 import UIKit
 
-
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

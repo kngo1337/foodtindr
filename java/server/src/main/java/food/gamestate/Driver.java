@@ -1,4 +1,4 @@
-package food.ws.gamestate;
+package food.gamestate;
 
 public class Driver {
     public static void main(String[] args){

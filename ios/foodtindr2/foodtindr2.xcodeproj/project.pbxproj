@@ -13,6 +13,8 @@
 		3F4C9B99256AD53C004748F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C9B97256AD53C004748F9 /* Main.storyboard */; };
 		3F4C9B9B256AD53E004748F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C9B9A256AD53E004748F9 /* Assets.xcassets */; };
 		3F4C9B9E256AD53E004748F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C9B9C256AD53E004748F9 /* LaunchScreen.storyboard */; };
+		3F4C9BA9256B3B2C004748F9 /* StartRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C9BA8256B3B2C004748F9 /* StartRoomViewController.swift */; };
+		3F4C9BB2256B4A22004748F9 /* ConfigVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C9BB1256B4A22004748F9 /* ConfigVariables.swift */; };
 		6FE0288AEAE0FE657639BD9E /* Pods_foodtindr2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7591C7088B36819136E4E1 /* Pods_foodtindr2.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		3F4C9B9A256AD53E004748F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4C9B9D256AD53E004748F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4C9B9F256AD53E004748F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4C9BA8256B3B2C004748F9 /* StartRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRoomViewController.swift; sourceTree = "<group>"; };
+		3F4C9BB1256B4A22004748F9 /* ConfigVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigVariables.swift; sourceTree = "<group>"; };
 		B12C738AA66159D301C7B919 /* Pods-foodtindr2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodtindr2.debug.xcconfig"; path = "Target Support Files/Pods-foodtindr2/Pods-foodtindr2.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2EEBA892FF2A92CAFE7421 /* Pods-foodtindr2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodtindr2.release.xcconfig"; path = "Target Support Files/Pods-foodtindr2/Pods-foodtindr2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +83,8 @@
 				3F4C9B9C256AD53E004748F9 /* LaunchScreen.storyboard */,
 				3F4C9B9F256AD53E004748F9 /* Info.plist */,
 				35E7369F256B27E200E10364 /* TableViewController.swift */,
+				3F4C9BA8256B3B2C004748F9 /* StartRoomViewController.swift */,
+				3F4C9BB1256B4A22004748F9 /* ConfigVariables.swift */,
 			);
 			path = foodtindr2;
 			sourceTree = "<group>";
@@ -205,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4C9BB2256B4A22004748F9 /* ConfigVariables.swift in Sources */,
 				3F4C9B92256AD53C004748F9 /* AppDelegate.swift in Sources */,
 				3F4C9B94256AD53C004748F9 /* SceneDelegate.swift in Sources */,
+				3F4C9BA9256B3B2C004748F9 /* StartRoomViewController.swift in Sources */,
 				35E736A0256B27E200E10364 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,7 +1,6 @@
-package food.ws.gamestate;
+package food.gamestate;
 
 import food.YelpAPI;
-import food.ws.gamestate.Player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
