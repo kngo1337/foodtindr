@@ -6,4 +6,4 @@ Java
         Build RPMs
 
 Architecture
-https://app.diagrams.net/#G1TdYJzHtEsRMcE3R6fXWgJEna8r-z6P9P
+https://drive.google.com/file/d/1TdYJzHtEsRMcE3R6fXWgJEna8r-z6P9P/view?usp=sharing
