@@ -1,5 +1,6 @@
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class StartRoomViewController: UIViewController, UITextFieldDelegate  {
 
@@ -16,18 +17,28 @@ class StartRoomViewController: UIViewController, UITextFieldDelegate  {
         super.viewDidLoad()
         enterNameTextField.delegate = self
         enterRoomCode.delegate = self
+        enterNameTextField.text = "HAO"
+        enterRoomCode.text = "ABCD"
     }
     
     @IBAction func createRoomPressed(_ sender: Any) {
         print("Create Room")
         
-        let dict: Dictionary<String, Any> = [:]
-        var request = URLRequest(url: URL(string: ConfigVariables.CREATE_ROOM)!)
-        request.httpMethod = HTTPMethod
+        var request = URLRequest(url: URL(string: ConfigVariables.CREATE_ROOM + "?playerName=" + enterNameTextField.text!)!)
+        request.httpMethod = HTTPMethod.get.rawValue
         request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 2
         
-        Alamofire.request(request).responseJSON { (response) in
-            completionHelper(response: response, defaultErrorMessage: "Unable to fetch vehicles", completion)
+        AF.request(request).responseJSON { response in
+            if (response.response?.statusCode != 200) {
+                print(response)
+            } else {
+                let responseJSON = JSON(response.data!)
+                let roomCode = responseJSON["roomCode"].string
+                print(roomCode!);
+                self.enterRoomCode.text = roomCode
+                self.goToNextRoom()
+            }
         }
     }
     
@@ -35,8 +46,28 @@ class StartRoomViewController: UIViewController, UITextFieldDelegate  {
         self.performSegue(withIdentifier: "goToRoom", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToRoom" {
+            let destionationVC = segue.destination as! JoinRoomTableViewController
+            destionationVC.roomCode = enterRoomCode.text!
+        }
+    }
+    
     @IBAction func joinRoomPressed(_ sender: Any) {
         print("Join Room Pressed")
+        var request = URLRequest(url: URL(string: ConfigVariables.JOIN_ROOM + "?playerName=" + enterNameTextField.text!
+                                            + "&roomCode=" + enterRoomCode.text!)!)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 2
+        
+        AF.request(request).response { response in
+            if (response.response?.statusCode != 200) {
+                print(response)
+            } else {
+                self.goToNextRoom()
+            }
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

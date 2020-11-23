@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35E736A0256B27E200E10364 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7369F256B27E200E10364 /* TableViewController.swift */; };
+		35E736A0256B27E200E10364 /* JoinRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E7369F256B27E200E10364 /* JoinRoomTableViewController.swift */; };
 		3F4C9B92256AD53C004748F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C9B91256AD53C004748F9 /* AppDelegate.swift */; };
 		3F4C9B94256AD53C004748F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C9B93256AD53C004748F9 /* SceneDelegate.swift */; };
 		3F4C9B99256AD53C004748F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4C9B97256AD53C004748F9 /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		2D7591C7088B36819136E4E1 /* Pods_foodtindr2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodtindr2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35E7369F256B27E200E10364 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		35E7369F256B27E200E10364 /* JoinRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomTableViewController.swift; sourceTree = "<group>"; };
 		3F4C9B8E256AD53C004748F9 /* foodtindr2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodtindr2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4C9B91256AD53C004748F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F4C9B93256AD53C004748F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				3F4C9B9A256AD53E004748F9 /* Assets.xcassets */,
 				3F4C9B9C256AD53E004748F9 /* LaunchScreen.storyboard */,
 				3F4C9B9F256AD53E004748F9 /* Info.plist */,
-				35E7369F256B27E200E10364 /* TableViewController.swift */,
+				35E7369F256B27E200E10364 /* JoinRoomTableViewController.swift */,
 				3F4C9BA8256B3B2C004748F9 /* StartRoomViewController.swift */,
 				3F4C9BB1256B4A22004748F9 /* ConfigVariables.swift */,
 			);
@@ -215,7 +215,7 @@
 				3F4C9B92256AD53C004748F9 /* AppDelegate.swift in Sources */,
 				3F4C9B94256AD53C004748F9 /* SceneDelegate.swift in Sources */,
 				3F4C9BA9256B3B2C004748F9 /* StartRoomViewController.swift in Sources */,
-				35E736A0256B27E200E10364 /* TableViewController.swift in Sources */,
+				35E736A0256B27E200E10364 /* JoinRoomTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
