@@ -1,5 +1,7 @@
 package food.ws.gamestate;
 
+import food.YelpAPI;
+
 import java.util.ArrayList;
 
 public class GameStateManager {
@@ -10,7 +12,7 @@ public class GameStateManager {
 
     }
 
-    private String createNewGame(String playerName){
+    public String createNewGame(String playerName){
         Room newGame = new Room();
         String randomString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuffer newGameCode = new StringBuffer(6);//Creates StringBuffer of size 4
@@ -31,7 +33,7 @@ public class GameStateManager {
         return newGameCode.toString();
     }
 
-    private void addPlayers(String roomCode, String playerName){
+    public void addPlayers(String roomCode, String playerName){
 
         for(Room game: gameRoom){
             if(game.roomCode.equals(roomCode)){
@@ -42,10 +44,14 @@ public class GameStateManager {
         throw new RuntimeException("Can't find room");
     }
 
-    void startGame(String roomCode){
+    public void startGame(String roomCode){
         for(Room game: gameRoom){
             if(game.roomCode.equals(roomCode)){
-                // TODO: 11/22/2020 yelp API sets restaurants
+                ArrayList<YelpAPI.Restaurant> listRestaurant = YelpAPI.getMeRestaurant();
+                for(YelpAPI.Restaurant restaurant: listRestaurant){
+                    game.restaurantMap.put(restaurant.restaurantName, 0);
+                }
+                game.restaurantToImage = listRestaurant;
                 game.gameStarted = true;
                 return;
             }
@@ -53,7 +59,7 @@ public class GameStateManager {
 
     }
 
-    private void confirmRestaurants(String roomCode, String playerName, String restaurant){
+    public void confirmRestaurants(String roomCode, String playerName, String restaurant){
         for(Room game: gameRoom){
             if(game.roomCode.equals(roomCode)){
                 Integer temp = game.restaurantMap.get(restaurant);
@@ -66,17 +72,20 @@ public class GameStateManager {
         }
     }
 
+//    Object getGameState(){
+//        Object hi = new Object();
+//
+//        return hi;
+//    }
 
-    Object getGameState(){
-        Object hi = new Object();
-
-        return hi;
+    public Room getRoom(String roomCode){
+        for(Room game: gameRoom){
+            if(game.roomCode.equals(roomCode)){
+                return game;
+            }
+        }
+        throw new RuntimeException("Runtime Error");
     }
 
-    public static void main(String[] args){
-        GameStateManager game = new GameStateManager();
-        String code = game.createNewGame("Tina");
-        System.out.println(code);
-        game.addPlayers(code, "Colin");
-    }
+
 }

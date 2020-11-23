@@ -1,5 +1,6 @@
 package food.ws.gamestate;
 
+import food.YelpAPI;
 import food.ws.gamestate.Player;
 
 import java.util.ArrayList;
@@ -7,10 +8,11 @@ import java.util.HashMap;
 
 public class Room{
 
-    ArrayList<Player> players;
+    ArrayList<Player> players = new ArrayList<>();
     String roomCode = "";
     public boolean gameStarted = false;
-    HashMap<String, Integer> restaurantMap;
+    HashMap<String, Integer> restaurantMap = new HashMap<>();;
+    ArrayList<YelpAPI.Restaurant> restaurantToImage = new ArrayList<>();
     boolean winner = false;
 
     public Room(){ }
@@ -19,6 +21,8 @@ public class Room{
         Player person = new Player(playerName);
         players.add(person);
     }
+
+
 
 
 
